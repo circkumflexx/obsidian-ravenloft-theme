@@ -1,0 +1,347 @@
+/*
+   Ravenloft Theme for Obsidian.md (Version: 1.0.0)
+   Parchment‑warm gothic dual‑mode theme (AD&D 2e Ravenloft inspired)
+   Source: https://github.com/circkumflexx/obsidian-ravenloft-theme
+*/
+
+/*
+   0. Local @font-face  (optional)
+*/
+
+/*
+   To use the bundled fonts without installing them on your system:
+   Remove the comment marks from the block below and place the .ttf font files in the folder:
+   [path to your Obsidian vault]/.obsidian/themes/fonts
+*/
+
+/*
+@font-face { font-family: "Mookmania";        src: url("../fonts/Mookmania-Regular.ttf")        format("truetype"); }
+@font-face { font-family: "Alegreya SC";      src: url("../fonts/AlegreyaSC-Regular.ttf")       format("truetype"); }
+@font-face { font-family: "Nodesto Cyrillic"; src: url("../fonts/NodestoCyrillic-Regular.ttf")  format("truetype"); }
+*/
+
+/*
+   1. Global Variables (fonts, metrics)
+*/
+
+:root {
+  --font-ui: "Open Sans", sans-serif;
+  --font-body: "Mookmania", serif;
+  --font-heading: "Alegreya SC", serif;
+  --font-title: "Nodesto Cyrillic", serif;
+
+  --fs-base: 16px;
+  --lh-base: 1.6;
+  --ls-title: 0.05em;
+
+  --radius-s: 2px;
+  --radius-m: 3px;
+  --sp-head-top: 1.2em;
+  --sp-head-bottom: 0.4em;
+  --pad-code-v: 0.15em;
+  --pad-code-h: 0.25em;
+}
+
+/*
+   2. Colour Palettes
+*/
+
+/* 2.1.  Dark theme */
+.theme-dark {
+  --bg-pri: #1b1412;
+  --bg-sec: #261b1a;
+  --bg-ter: #332423;
+
+  --txt-norm: #f0eae2;
+  --txt-muted: #c8b4aa;
+  --txt-faint: #a2928c;
+  --title-col: #7e2f2a;
+
+  --accent: #c0564b;
+  --accent-h: #da6a5c;
+
+  --h1-col: #c0564b;
+  --h2-col: #b16a5c;
+  --h3-col: #a78478;
+  --h4-col: #958176;
+  --h5-col: #85736b;
+  --h6-col: #776760;
+
+  --code-bg: #2a1f1e;
+  --code-txt: #d3c6bd;
+  --hi-bg: #3e2c29;
+
+  --txt-em: #b88a82;
+  --txt-bold: #c0564b;
+
+  --background-primary: var(--bg-pri);
+  --background-secondary: var(--bg-sec);
+  --background-tertiary: var(--bg-ter);
+
+  --text-normal: var(--txt-norm);
+  --text-muted: var(--txt-muted);
+  --text-faint: var(--txt-faint);
+
+  --text-accent: var(--accent);
+  --accent-hover: var(--accent-h);
+
+  --interactive-accent: var(--accent);
+  --interactive-accent-hover: var(--accent-h);
+  --interactive-accent-hsl: 10 60% 45%;
+
+  --text-selection: rgb(192 86 75 / 35%);
+}
+
+/* 2.2.  Light Theme */
+.theme-light {
+  --bg-pri: #f3eee6;
+  --bg-sec: #e8dfd6;
+  --bg-ter: #ddd2c8;
+
+  --txt-norm: #362a27;
+  --txt-muted: #6f5f5a;
+  --txt-faint: #a2928a;
+  --title-col: #7e2f2a;
+
+  --accent: #92342c;
+  --accent-h: #a9473e;
+
+  --h1-col: #7e2f2a;
+  --h2-col: #874338;
+  --h3-col: #926054;
+  --h4-col: #9c7467;
+  --h5-col: #a7897d;
+  --h6-col: #b19991;
+
+  --code-bg: #eae1d7;
+  --code-txt: #57423d;
+  --hi-bg: #cfc2b4;
+
+  --txt-em: #8f6059;
+  --txt-bold: #92342c;
+
+  --background-primary: var(--bg-pri);
+  --background-secondary: var(--bg-sec);
+  --background-tertiary: var(--bg-ter);
+
+  --text-normal: var(--txt-norm);
+  --text-muted: var(--txt-muted);
+  --text-faint: var(--txt-faint);
+
+  --text-accent: var(--accent);
+  --accent-hover: var(--accent-h);
+
+  --interactive-accent: var(--accent);
+  --interactive-accent-hover: var(--accent-h);
+  --interactive-accent-hsl: 10 60% 45%;
+
+  --text-selection: rgb(192 86 75 / 35%);
+}
+
+/*
+   3. Base Layout & UI
+*/
+
+/* 3.1.  UI chrome */
+body {
+  font-family: var(--font-ui);
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+  background: var(--bg-pri);
+  color: var(--txt-norm);
+}
+
+/* 3.2.  Main panes & sidebars inherit UI font */
+.workspace-tab-header,
+.workspace-split,
+.sidebar,
+.mod-left-split,
+.mod-right-split {
+  font-family: var(--font-ui);
+}
+
+/*
+   4. Markdown Content
+*/
+
+/* 4.1. Preview & Live editor paragraphs */
+.markdown-preview-view,
+.markdown-preview-view p,
+.markdown-preview-view li,
+.markdown-source-view.mod-cm6 .cm-content,
+.markdown-source-view.mod-cm6 .cm-line {
+  font-family: var(--font-body);
+  color: var(--txt-norm);
+}
+
+/* 4.2. Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--accent-h);
+  text-decoration: underline;
+}
+
+/* 4.3. Inline title (filename inside body of file) */
+.inline-title:not([data-level]) {
+  font-family: var(--font-title);
+  letter-spacing: var(--ls-title);
+  color: var(--title-col);
+}
+
+/* 4.4. Emphasis (italic & bold) — Preview */
+.theme-dark .markdown-preview-view em,
+.theme-dark .markdown-preview-view i,
+.theme-dark .markdown-preview-view cite,
+.theme-light .markdown-preview-view em,
+.theme-light .markdown-preview-view i,
+.theme-light .markdown-preview-view cite {
+  color: var(--txt-em) !important;
+  font-style: italic;
+}
+
+.theme-dark .markdown-preview-view strong,
+.theme-dark .markdown-preview-view b,
+.theme-light .markdown-preview-view strong,
+.theme-light .markdown-preview-view b {
+  color: var(--txt-bold) !important;
+  font-weight: 700;
+}
+
+/* 4.5. Emphasis — Live editor */
+.theme-dark .markdown-source-view.mod-cm6 .cm-em,
+.theme-light .markdown-source-view.mod-cm6 .cm-em {
+  color: var(--txt-em) !important;
+  font-style: italic;
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-strong,
+.theme-light .markdown-source-view.mod-cm6 .cm-strong {
+  color: var(--txt-bold) !important;
+  font-weight: 700;
+}
+
+/*
+   5. Headings (Preview & Live‑editor)
+*/
+
+.theme-dark .markdown-preview-view h1,
+.theme-dark .markdown-preview-view h2,
+.theme-dark .markdown-preview-view h3,
+.theme-dark .markdown-preview-view h4,
+.theme-dark .markdown-preview-view h5,
+.theme-dark .markdown-preview-view h6,
+.theme-light .markdown-preview-view h1,
+.theme-light .markdown-preview-view h2,
+.theme-light .markdown-preview-view h3,
+.theme-light .markdown-preview-view h4,
+.theme-light .markdown-preview-view h5,
+.theme-light .markdown-preview-view h6,
+.theme-dark .markdown-source-view.mod-cm6 .cm-header,
+.theme-light .markdown-source-view.mod-cm6 .cm-header {
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  margin: var(--sp-head-top) 0 var(--sp-head-bottom);
+  font-weight: 700;
+}
+
+/* Heading palette — Dark theme */
+.theme-dark .markdown-preview-view h1 { color: var(--h1-col); }
+.theme-dark .markdown-preview-view h2 { color: var(--h2-col); }
+.theme-dark .markdown-preview-view h3 { color: var(--h3-col); }
+.theme-dark .markdown-preview-view h4 { color: var(--h4-col); }
+.theme-dark .markdown-preview-view h5 { color: var(--h5-col); }
+.theme-dark .markdown-preview-view h6 { color: var(--h6-col); }
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-header-1 { color: var(--h1-col); }
+.theme-dark .markdown-source-view.mod-cm6 .cm-header-2 { color: var(--h2-col); }
+.theme-dark .markdown-source-view.mod-cm6 .cm-header-3 { color: var(--h3-col); }
+.theme-dark .markdown-source-view.mod-cm6 .cm-header-4 { color: var(--h4-col); }
+.theme-dark .markdown-source-view.mod-cm6 .cm-header-5 { color: var(--h5-col); }
+.theme-dark .markdown-source-view.mod-cm6 .cm-header-6 { color: var(--h6-col); }
+
+/* Heading palette — Light theme */
+.theme-light .markdown-preview-view h1 { color: var(--h1-col); }
+.theme-light .markdown-preview-view h2 { color: var(--h2-col); }
+.theme-light .markdown-preview-view h3 { color: var(--h3-col); }
+.theme-light .markdown-preview-view h4 { color: var(--h4-col); }
+.theme-light .markdown-preview-view h5 { color: var(--h5-col); }
+.theme-light .markdown-preview-view h6 { color: var(--h6-col); }
+
+.theme-light .markdown-source-view.mod-cm6 .cm-header-1 { color: var(--h1-col); }
+.theme-light .markdown-source-view.mod-cm6 .cm-header-2 { color: var(--h2-col); }
+.theme-light .markdown-source-view.mod-cm6 .cm-header-3 { color: var(--h3-col); }
+.theme-light .markdown-source-view.mod-cm6 .cm-header-4 { color: var(--h4-col); }
+.theme-light .markdown-source-view.mod-cm6 .cm-header-5 { color: var(--h5-col); }
+.theme-light .markdown-source-view.mod-cm6 .cm-header-6 { color: var(--h6-col); }
+
+/*
+   6. Search Highlight
+*/
+
+/* 6.1.  Obsidian >= 1.6 universal span */
+.cm-s-obsidian span.obsidian-search-match-highlight,
+span.obsidian-search-match-highlight {
+  background-color: hsl(var(--interactive-accent-hsl) / 0.45) !important;
+  outline: 2px solid hsl(var(--interactive-accent-hsl)) !important;
+  border-radius: var(--radius-s);
+}
+
+span.obsidian-search-match-highlight[data-selected="true"] {
+  background-color: var(--interactive-accent-hover) !important;
+  color: var(--background-primary) !important;
+}
+
+/* 6.2.  CodeMirror 6 */
+.theme-dark .cm-searchMatch,
+.theme-light .cm-searchMatch,
+.theme-dark .cm-selectionMatch,
+.theme-light .cm-selectionMatch,
+.markdown-preview-view .search-highlight {
+  background-color: hsl(var(--interactive-accent-hsl) / 1);
+  filter: brightness(1.35);
+  border-radius: var(--radius-s);
+}
+
+.theme-dark .cm-searchMatch-selected,
+.theme-light .cm-searchMatch-selected {
+  background-color: var(--interactive-accent-hover);
+  color: var(--background-primary);
+}
+
+.markdown-preview-view .search-highlight {
+  background-color: hsl(var(--interactive-accent-hsl) / 0.45) !important;
+  border-radius: var(--radius-s) !important;
+}
+
+/* 6.3.  CodeMirror 5 (legacy Source Mode) */
+.legacy-editor .CodeMirror .CodeMirror-searching {
+  background-color: hsl(var(--interactive-accent-hsl) / 0.45);
+  outline: 1px solid hsl(var(--interactive-accent-hsl));
+  border-radius: var(--radius-s);
+}
+
+.legacy-editor .CodeMirror .CodeMirror-searching[data-selected="true"] {
+  background-color: var(--interactive-accent);
+  color: var(--background-primary);
+}
+
+/*
+   7. Code & Quote blocks
+*/
+
+pre code,
+.markdown-preview-view code {
+  background: var(--code-bg);
+  color: var(--code-txt);
+  padding: var(--pad-code-v) var(--pad-code-h);
+  border-radius: var(--radius-m);
+}
+
+/*
+   EOF
+*/
