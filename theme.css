@@ -1,24 +1,19 @@
 /*
-   Ravenloft Theme for Obsidian.md (Version: 1.0.0)
+   Ravenloft Theme for Obsidian.md (Version: 1.1.0)
    Parchment‑warm gothic dual‑mode theme (AD&D 2e Ravenloft inspired)
    Source: https://github.com/circkumflexx/obsidian-ravenloft-theme
 */
 
 /*
-   0. Local @font-face  (optional)
+   0. Import Google Fonts
 */
 
-/*
-   To use the bundled fonts without installing them on your system:
-   Remove the comment marks from the block below and place the .ttf font files in the folder:
-   [path to your Obsidian vault]/.obsidian/themes/fonts
-*/
-
-/*
-@font-face { font-family: "Mookmania";        src: url("../fonts/Mookmania-Regular.ttf")        format("truetype"); }
-@font-face { font-family: "Alegreya SC";      src: url("../fonts/AlegreyaSC-Regular.ttf")       format("truetype"); }
-@font-face { font-family: "Nodesto Cyrillic"; src: url("../fonts/NodestoCyrillic-Regular.ttf")  format("truetype"); }
-*/
+@import url("https://fonts.googleapis.com/css2?\
+family=Ruslan+Display&\
+family=Vollkorn+SC:wght@600;700&\
+family=Literata:ital,wght@0,400;0,700;1,400;1,700&\
+family=Open+Sans:wght@400;600;700&\
+subset=cyrillic&display=swap");
 
 /*
    1. Global Variables (fonts, metrics)
@@ -26,13 +21,14 @@
 
 :root {
   --font-ui: "Open Sans", sans-serif;
-  --font-body: "Mookmania", serif;
-  --font-heading: "Alegreya SC", serif;
-  --font-title: "Nodesto Cyrillic", serif;
+  --font-body: "Literata", serif;
+  --font-heading: "Vollkorn SC", serif;
+  --font-title: "Ruslan Display", serif;
 
   --fs-base: 16px;
   --lh-base: 1.6;
-  --ls-title: 0.05em;
+  --ls-title: 0.01em;
+  --fs-inline-title: 3rem;
 
   --radius-s: 2px;
   --radius-m: 3px;
@@ -190,6 +186,8 @@ a:hover {
 .inline-title:not([data-level]) {
   font-family: var(--font-title);
   letter-spacing: var(--ls-title);
+  font-size: var(--fs-inline-title);
+  font-weight: var(--fw-inline-title);
   color: var(--title-col);
 }
 
