@@ -7,7 +7,7 @@
 2. Screenshots
 3. Requirements
 4. Installation
-5. Recommended Fonts
+5. Fonts
 6. Versioning & Changelog
 7. License
 
@@ -41,7 +41,8 @@
 1. Download / clone files into .obsidian/themes/Ravenloft/.
 2. Settings → Appearance → Themes → select Ravenloft.
 
-Path to Vault and then:
+Example vault structure:
+```
 .obsidian/
 └─ themes/
    └─ Ravenloft/
@@ -54,6 +55,7 @@ Path to Vault and then:
       ├─ LICENSE
       ├─ versions.json
       ├─ .stylelintrc.json
+```
 
 ---
 ## 5. Fonts
@@ -64,22 +66,26 @@ This theme uses Google Fonts:
 * **Vollkorn SC** is for headings https://fonts.google.com/specimen/Vollkorn+SC
 * **Ruslan Display** is for inline filename https://fonts.google.com/specimen/Ruslan+Display
 
-Fonts are imported on-the-fly from *fonts.google.com*; they are **not** bundled with this repository.
+Fonts are embedded into theme.css according to the instruction: https://docs.obsidian.md/Themes/App+themes/Embed+fonts+and+images+in+your+theme
 
 ---
 ## 6. Versioning & Changelog
-This is version 1.1.0
-Complete overhaul of the font stack and minor tweaks and typos in this file.
+This is version 1.1.1
+This version overhauls the font stack (now Base64-embedded in theme.css) and fixes minor typos in this README.md
 
 ---
 ## 7. License
 This theme is released under the **MIT License** (see `LICENSE`).
 All recommended fonts are distributed under their own libre licenses and are **not** part of this repository; you are responsible for complying with each font’s terms.
+
 ### Some License Details
 * **AD&D** and **Ravenloft** are trademarks of Wizards of the Coast LLC and Hasbro Inc.
+* Fonts are under their own license: SIL OPEN FONT LICENSE Version 1.1 (OFL).
+* MIT covers only the CSS and other source files of the theme.
+* OFL covers the bundled fonts. Any derivative work that changes or extracts these fonts must also comply with the OFL.
 
 ---
-* Thanks the Obsidian community for documentation & CSS tricks <3
+* Thanks to the Obsidian community for documentation & CSS tricks <3
 * Thanks TSR and WotC for the decades of Ravenloft <3
 
 ---
