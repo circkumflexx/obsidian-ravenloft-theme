@@ -1,1 +1,3 @@
-json { "rules": { "selector-class-pattern": ["^[a-z0-9\\-]+$", { "ignoreSelectors": ["^cm-"] }] } }
+{
+  "extends": ["stylelint-config-obsidianmd"]
+}
