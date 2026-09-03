@@ -25,7 +25,7 @@ licence records are also retained in the embedded TTF metadata.
 
 ## Vollkorn SC
 
-- Embedded style: Regular
+- Embedded styles: Regular, SemiBold, Bold
 - Copyright: Copyright 2017 The Vollkorn Project Authors
 - Source and licence: <https://github.com/FAlthausen/Vollkorn-Typeface/blob/master/OFL.txt>
 
