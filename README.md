@@ -2,28 +2,25 @@
 
 # Ravenloft
 
-### A parchment-bound gothic theme for Obsidian
+A parchment-bound gothic theme for Obsidian
 
-**RELEASE 2.0.0 // THE MISTS ARE STILL HERE**
+**Version 2.0.1 // The Mists Are Still Here**
 
-`aged parchment by day` · `midnight library by night` · `Cyrillic + Latin` · `no blood sacrifice required`
+`aged parchment by day` · `midnight library by night` · `Cyrillic + Latin`
 
 </div>
 
 ---
 
-> [!WARNING]
-> This interface contains candle soot, vagabond narrators, forbidden marginalia, and one more toll of the bell than your heartbeat can account for.
+Imagine candle soot, wandering storytellers, forbidden marginalia, and mists creeping past the window. Picture yourself among long-forgotten archives and candlelit libraries, with the peculiar confidence of a scholar who has just opened an obviously cursed folio. Then get to work.
 
-Ravenloft is a dual-mode Obsidian theme inspired by classic gothic role-playing books, medieval marginalia, decaying archives, candle-lit libraries, and the peculiar confidence of a scholar who has just opened the obviously cursed folio.
+Ravenloft is a dual-mode Obsidian theme inspired by classic gothic role-playing games.
 
-It aims for atmosphere while sacrificing as little as possible of what themes are actually for: **reading and writing for hours**.
+It aims for atmosphere without losing sight of what themes are for: comfortable reading and writing over long sessions.
 
-## `2.0.0` — a refactor, not a resurrection spell
+## `2.x` — a refactor, not a resurrection spell
 
-The original Ravenloft theme was written against an older Obsidian interface. Its soul was exactly as intended, but too many parts of its skeleton depended on historical DOM structure, legacy CodeMirror selectors, direct component overrides, and deprecated colour machinery.
-
-Version 2.0.0 is a ground-up refactor of the theme.
+The original Ravenloft theme was written against an older Obsidian interface. Ravenloft 2.x is a ground-up refactor of that original theme. The 2.0.1 patch refines its typography for long-form reading.
 
 The visual covenant remains intact:
 
@@ -36,60 +33,21 @@ The visual covenant remains intact:
 
 Under the vellum, however, nearly everything has been rebuilt around modern Obsidian CSS variables.
 
-| Layer | Ravenloft 1.x | Ravenloft 2.0 |
-|---|---|---|
-| Editor engine | Historical selectors and CodeMirror-era patches | Modern CodeMirror 6-aware styling |
-| Colour system | Direct colours and deprecated HSL helpers | Native palette variables and OKLCH colour mixing |
-| Interface | Selected components | Semantic coverage across the application |
-| Customisation | Edit the CSS and pray | **Style Settings** plugin support |
-| Data views | Predates Bases | Native Bases tables and cards |
-| Accessibility | Mostly inherited | Contrast mode, reduced motion, mobile and print passes |
-| Maintenance | Selector-heavy | Variable-first, low-specificity architecture |
+See the [changelog](CHANGELOG.md) for the complete release history.
 
-## Field guide to the domain
+## Screenshots
 
-### Dual-mode palette
+### Aged Parchment
 
-- **Aged Parchment** — warm ivory paper, sepia structure, ink-brown text, restrained crimson accents.
-- **Midnight Library** — near-black umber surfaces, warm ivory text, ember-red highlights, no cold grey void.
-- Six colour-graded heading levels remain distinct without turning a note into a rainbow.
-- Selection, highlights, borders, active states, links, tags, and callouts derive from the same semantic palette.
+![Ravenloft in Light mode](preview-light-theme.png)
 
-### Typography grimoire
+### Midnight Library
 
-Ravenloft embeds its typefaces directly in `theme.css`. The theme makes no runtime font requests and remains visually intact offline.
-
-| Duty | Typeface | Character sheet |
-|---|---|---|
-| Long-form reading and editing | **Literata** | Literary serif, Cyrillic and Latin |
-| Interface and navigation | **Open Sans** | Quiet, highly legible sans-serif |
-| Headings | **Vollkorn SC** | Small-caps authority without ornamental excess |
-| Inline note title | **Ruslan Display** | One deliberate flourish at the entrance |
-
-All bundled font files retain their own SIL Open Font License terms. Exact
-copyright notices and licence sources are recorded in
-[Font licences and attribution](FONT-LICENSES.md).
-
-### Modern Obsidian coverage
-
-The refactor includes deliberate styling for:
-
-- Live Preview and Reading view;
-- inline titles and all six heading levels;
-- tabs, stacked tabs, title bar, ribbon, status bar, menus and prompts;
-- file navigation, search results and active states;
-- Properties and metadata;
-- links, blockquotes, lists, task checkboxes, tags and embeds;
-- inline code, fenced code blocks and syntax tokens;
-- Markdown tables;
-- callouts;
-- modals and form controls;
-- native **Bases** table and card views;
-- desktop, mobile, reduced-motion and print contexts.
+![Ravenloft in Dark mode](preview-dark-theme.png)
 
 ## Style Settings support
 
-[Style Settings](https://github.com/community-archive/obsidian-style-settings) is optional. Ravenloft works without it, but installing the plugin reveals a control panel containing **14 user-facing settings**, with English and Russian labels.
+[Style Settings](https://github.com/obsidian-community/obsidian-style-settings) is optional. Ravenloft works without it, but installing the plugin reveals a bilingual control panel labelled in English and Russian.
 
 ### Colours
 
@@ -122,7 +80,7 @@ To find the controls:
 
 ## Ravenloft-themed callouts
 
-Alongside Obsidian's standard callouts, the theme defines two setting-friendly variants.
+Alongside Obsidian's standard callouts, the theme defines two theme-specific variants.
 
 ```markdown
 > [!mist] The road is no longer where the map left it
@@ -135,15 +93,46 @@ Alongside Obsidian's standard callouts, the theme defines two setting-friendly v
 - `mist` uses the cyan semantic colour and a fog icon.
 - `lore` uses the purple semantic colour and an open-book icon.
 
-## Screenshots
+## Field guide to the mists
 
-### Aged Parchment
+### Dual-mode palette
 
-![Ravenloft in Light mode](preview-light-theme.png)
+- **Aged Parchment** — warm ivory paper, sepia structure, ink-brown text, restrained crimson accents.
+- **Midnight Library** — near-black umber surfaces, warm ivory text, ember-red highlights, no cold grey void.
+- Six colour-graded heading levels remain distinct without turning a note into a rainbow.
+- Selection, highlights, borders, active states, links, tags, and callouts derive from the same semantic palette.
 
-### Midnight Library
+### Typography grimoire
 
-![Ravenloft in Dark mode](preview-dark-theme.png)
+Ravenloft embeds its typefaces directly in `theme.css`. The theme makes no font requests at runtime and remains visually intact offline.
+
+| Duty | Typeface | Character sheet |
+|---|---|---|
+| Long-form reading and editing | **Literata** | Literary serif, Cyrillic and Latin |
+| Interface and navigation | **Open Sans** | Quiet, highly legible sans-serif |
+| Headings | **Vollkorn SC** | Small-caps authority without ornamental excess |
+| Inline note title | **Ruslan Display** | One deliberate flourish at the entrance |
+
+All bundled font files retain their own SIL Open Font License terms. Exact
+copyright notices and licence sources are recorded in
+[Font licences and attribution](FONT-LICENSES.md).
+
+### Modern Obsidian coverage
+
+The refactor includes deliberate styling for:
+
+- Live Preview and Reading view;
+- inline titles and all six heading levels;
+- tabs, stacked tabs, title bar, ribbon, status bar, menus and prompts;
+- file navigation, search results and active states;
+- Properties and metadata;
+- links, blockquotes, lists, task checkboxes, tags and embeds;
+- inline code, fenced code blocks and syntax tokens;
+- Markdown tables;
+- callouts;
+- modals and form controls;
+- native **Bases** table and card views;
+- desktop, mobile, reduced-motion and print contexts.
 
 ## Compatibility matrix
 
@@ -171,7 +160,7 @@ choose **Install and use**.
 ### Manual installation
 
 To test a release before the catalogue has picked it up, or to install the
-theme without using Community Themes:
+theme without using the Community Themes catalogue:
 
 1. Download `theme.css` and `manifest.json` from the repository or the latest release assets.
 2. Create this folder inside your vault:
@@ -193,7 +182,7 @@ theme without using Community Themes:
 
 ## Maintenance notes for fellow archivists
 
-Ravenloft 2.0 follows a few strict rules:
+Ravenloft 2.x follows a few strict rules:
 
 ```text
 prefer semantic variables
@@ -213,47 +202,16 @@ do not summon !important unless the walls are already bleeding
 - CSS is checked with `stylelint-config-obsidianmd`.
 - The Style Settings YAML block is machine-validated.
 
-To run the same CSS quality gate locally (Node.js is needed for development,
-not for installing the theme):
+To run the same CSS quality gate locally (Node.js is needed for development, not for installing the theme):
 
 ```shell
 npm install
 npm run lint
 ```
 
-## AI-assisted refactor
+## AI-assisted development
 
-Ravenloft 2.0 was rebuilt with **OpenAI Codex** as an AI development assistant working under human direction. This disclosure is included deliberately: software archaeology is still archaeology, even when one of the lantern-bearers is made of matrix multiplication.
-
-Codex was used to:
-
-- research the current Obsidian theme architecture, CSS variables, manifest requirements, and Style Settings format;
-- audit the legacy stylesheet and help replace brittle selectors with a variable-first structure;
-- implement and check modern component coverage, accessibility states, responsive behaviour, and colour contrast;
-- validate the stylesheet, embedded fonts, manifest, and Style Settings metadata.
-
-The original theme, its visual identity, and its design values were created by the author. Creative direction, release decisions, and responsibility for the finished theme remain with the human maintainer.
-
-No AI system, helper script, telemetry, API client, or model runtime is included in Ravenloft. The distributed theme remains exactly what an Obsidian theme should be: CSS, a JSON manifest, locally embedded assets, and so on.
-
-## Version ledger
-
-### `2.0.0` — The Mists Are Still Here
-
-- complete variable-first refactor for modern Obsidian;
-- redesigned Light and Dark semantic palettes;
-- CodeMirror 6 and modern search styling;
-- Style Settings support with bilingual labels;
-- native Bases, Properties, tabs, navigation, modal, mobile and print coverage;
-- Focus, density, atmosphere, contrast and motion controls;
-- custom `mist` and `lore` callouts;
-- contrast and maintainability pass;
-- all original embedded typefaces preserved.
-
-### `1.1.1` — The Bound Font Edition
-
-- embedded the original font stack into `theme.css`;
-- corrected documentation details.
+Ravenloft 2.x was developed with **OpenAI Codex** under human direction and review. See the [AI assistance disclosure](AI-DISCLOSURE.md) for the scope of that assistance and the maintainer's responsibilities.
 
 ## Licence and provenance
 
@@ -272,6 +230,6 @@ No AI system, helper script, telemetry, API client, or model runtime is included
 
 <div align="center">
 
-**Write carefully. Cross-link obsessively. Do not answer the thirteenth toll of the bell.**
+**Write carefully. Cross-link obsessively. And please... Do not lose yourself in the Mists.**
 
 </div>
